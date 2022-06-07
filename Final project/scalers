@@ -1,0 +1,15 @@
+from sklearn import preprocessing
+import numpy as np
+import pandas as pd
+
+train_data = load_data('datos_limpios.csv')
+train_data
+train_data.describe()
+
+scaler = preprocessing.StandardScaler().fit(train_data)
+scaler
+scaler.mean_
+scaler.scale_
+
+X_scaled = scaler.transform(train_data)
+X_scaled
